@@ -1,0 +1,204 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF0B1DFA-D34F-41C8-8838-DB812EB5CDB8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KNN</RootNamespace>
+    <AssemblyName>KNN</AssemblyName>
+    <ApplicationIcon>ico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChartFX.Lite, Version=6.0.839.0, Culture=neutral, PublicKeyToken=a1878e2052c08dce">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Archivos de programa\ChartFX Lite for .NET\bin\ChartFX.Lite.dll</HintPath>
+    </Reference>
+    <Reference Include="Iridium.PerformanceAnalysis, Version=2008.8.16.470, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Iridium\Iridium.PerformanceAnalysis.exe</HintPath>
+    </Reference>
+    <Reference Include="Iridium.Test, Version=2008.8.16.470, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Iridium\Iridium.Test.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Iridium, Version=2008.8.16.470, Culture=neutral, PublicKeyToken=c061a3ec32cc0c6f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Iridium\MathNet.Iridium.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Iridium.resources, Version=2008.8.16.470, Culture=fr, PublicKeyToken=c061a3ec32cc0c6f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Iridium\MathNet.Iridium.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Iridium\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="VentanaAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaAcercaDe.Designer.cs">
+      <DependentUpon>VentanaAcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaNormalizarAtributos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaNormalizarAtributos.Designer.cs">
+      <DependentUpon>VentanaNormalizarAtributos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaPesadoCasos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPesadoCasos.Designer.cs">
+      <DependentUpon>VentanaPesadoCasos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaPesadoAtributos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPesadoAtributos.Designer.cs">
+      <DependentUpon>VentanaPesadoAtributos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KVecinos.cs" />
+    <Compile Include="VentanaAmpliarConjunto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaAmpliarConjunto.Designer.cs">
+      <DependentUpon>VentanaAmpliarConjunto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaIgnorarAtributos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaIgnorarAtributos.Designer.cs">
+      <DependentUpon>VentanaIgnorarAtributos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaMostrarAtributos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaMostrarAtributos.Designer.cs">
+      <DependentUpon>VentanaMostrarAtributos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipal.Designer.cs">
+      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="VentanaAcercaDe.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentanaAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaNormalizarAtributos.resx">
+      <DependentUpon>VentanaNormalizarAtributos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="VentanaAmpliarConjunto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentanaAmpliarConjunto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaIgnorarAtributos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentanaIgnorarAtributos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaMostrarAtributos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentanaMostrarAtributos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPesadoAtributos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentanaPesadoAtributos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPesadoCasos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentanaPesadoCasos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaResultados.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentanaResultados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaValoresDesconocidos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentanaValoresDesconocidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="VentanaResultados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaResultados.Designer.cs">
+      <DependentUpon>VentanaResultados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaValoresDesconocidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaValoresDesconocidos.Designer.cs">
+      <DependentUpon>VentanaValoresDesconocidos.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
